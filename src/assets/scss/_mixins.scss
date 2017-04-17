@@ -7,3 +7,10 @@
     font-size: $font-size * 3;
   }
 }
+
+@mixin btnActive () {
+  &:active {
+    color: #fff;
+    background-color: $blue;
+  }
+}

@@ -48,7 +48,7 @@
         }
       }
       .icon {
-        margin-bottom: px2rem(10px);
+        margin-bottom: px2rem(8px);
         @include font-dpr(20px)
       }
     }

@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <v-header :title="title" :back-display="backDisplay" :menu-display="menuDisplay"></v-header>
-    <div class="content">
-      <router-view></router-view>
+    <div class="content" :class="{'tabar': tabar}">
+      <transition name="slide-left">
+        <router-view></router-view>
+      </transition>
     </div>
     <v-tabar></v-tabar>
   </div>
@@ -30,6 +32,9 @@ export default {
 
       }
     },
+    tabar () {
+      return this.$route.path.split('/').length > 2 ? false : true
+    },
     backDisplay () {
       return this.$route.path.split('/').length > 2 ? true : false
     },
@@ -40,16 +45,38 @@ export default {
 }
 </script>
 <style rel="stylesheet/scss" lang="scss">
-html, body{
-  height: 100%;
-}
-#app {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.content {
-  flex: 1;
-  overflow-y: auto;
-}
+  @import "assets/scss/function";
+  html, body{
+    height: 100%;
+  }
+  html * {
+    box-sizing: border-box;
+  }
+  img {
+    max-width: 100%;
+  }
+  #app {
+    height: 100%;
+    .content {
+      &.tabar {
+        padding-bottom: px2rem(100px);
+      }
+      padding-top: px2rem(90px);
+    }
+    .slide-left-enter-active {
+      animation: slideLeft .3s;
+    }
+  }
+
+
+  @keyframes slideLeft {
+    from {
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
 </style>

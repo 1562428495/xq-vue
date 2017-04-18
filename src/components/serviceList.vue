@@ -18,7 +18,7 @@
         <figcaption>我的车票</figcaption>
       </figure>
     </router-link>
-    <router-link to="/my">
+    <router-link to="/user">
       <figure>
         <img src="http://css.8684.com/xq/images/usericon_w.png">
         <figcaption>我的</figcaption>

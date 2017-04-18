@@ -54,6 +54,10 @@ a,a:link,a:visited,a:active {
   -webkit-backface-visibility: hidden;
 }
 
+input[type="button"] {
+  -webkit-appearance: none;
+}
+
 li {
   list-style: none;
 }

@@ -12,12 +12,9 @@
     position: relative;
     width: 96%;
     margin: 0 auto;
-    img {
-      width: 100%;
-    }
     .icon-close {
       position: absolute;
-      right: -8px;
+      right: -5px;
       top: -8px;
       @include font-dpr(16px);
       color: #000;

@@ -32,6 +32,12 @@
   @import "../assets/scss/index.scss";
 
   .header {
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translateZ(0);
+    width: 100%;
     display: flex;
     align-items: center;
     height: px2rem(90px);
@@ -43,9 +49,11 @@
     flex: 1;
     text-align: left;
     font-size: 0;
-    img {
+    a {
+      display: block;
       width: px2rem(110px);
     }
+
   }
   .back {
     flex: 1;

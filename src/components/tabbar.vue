@@ -19,7 +19,7 @@
       </router-link>
     </div>
     <div class="tab-item">
-      <router-link to="/my">
+      <router-link to="/user">
         <div class="icon icon-wode"></div>
         <div class="tab-text">我的</div>
       </router-link>
@@ -34,9 +34,15 @@
 <style rel="stylesheet/scss" lang="scss" scoped>
   @import "../assets/scss/index.scss";
   .tabbar {
+    z-index: 999;
+    position: fixed;
+    transform: translateZ(0);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: px2rem(90px);
     display: flex;
     align-items: center;
-    height: px2rem(90px);
     text-align: center;
     box-shadow: 0 0 4px rgba(#000, .2);
     background-color: #fff;

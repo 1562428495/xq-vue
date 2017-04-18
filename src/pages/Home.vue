@@ -7,25 +7,37 @@
       <div class="con">
         <div class="invite">马上邀请邻居入住</div>
         <div class="people-num"><i class="icon icon-wode"></i>小区已入住<span class="num">7172</span>人</div>
-        <div class="time">时间 <button>工作日</button><button>周末</button></div>
-        <div class="direction">方向 <button>出门</button><button>回家</button></div>
+        <div class="time">
+          时间
+          <button>工作日</button>
+          <button>周末</button></div>
+        <div class="direction">
+          方向
+          <button>出门</button>
+          <button>回家</button></div>
       </div>
     </div>
     <route-list></route-list>
-    <v-footer></v-footer>
+    <share v-show="share"></share>
   </div>
 </template>
 <script type="text/ecmascript-6">
   import adv from '@/components/advertisement'
   import serviceList from '@/components/serviceList'
   import routeList from '@/components/routeList'
-  import footer from '@/components/footer'
+  import share from '@/components/shareAlert'
+
   export default {
     components: {
       'v-adv': adv,
       'service-list': serviceList,
       'route-list': routeList,
-      'v-footer': footer
+      share
+    },
+    data () {
+      return {
+        share: false
+      }
     }
   }
 </script>

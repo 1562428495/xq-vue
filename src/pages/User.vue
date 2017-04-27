@@ -1,7 +1,11 @@
 <template>
-  <div>user</div>
+  <div class="user">
+  	user page
+  </div>
 </template>
 <script type="text/ecmascript-6">
+	export default {}
 </script>
-<style>
+<style scoped>
+	
 </style>

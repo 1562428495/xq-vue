@@ -5,11 +5,11 @@
     </div>
     <div class="back" v-if="backDisplay" @click="goBack"><i class="icon icon-jiantou_zuo"></i></div>
     <div class="title">{{title}}</div>
-    <div class="icons"><i v-if="menuDisplay" class="icon icon-caidanlan"></i></div>
+    <div class="icons"><i v-if="menuDisplay" class="icon icon-caidanlan" @click="showSlideBar"></i></div>
   </header>
 </template>
 
-<script type="text/ecmascript-6">
+<script>
   export default {
     props: {
       title: String,
@@ -22,6 +22,9 @@
     methods: {
       goBack () {
         window.history.back()
+      },
+      showSlideBar() {
+        this.$store.dispatch('setNavStatus', true)
       }
     }
   }

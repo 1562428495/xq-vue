@@ -7,17 +7,20 @@
       </transition>
     </div>
     <v-tabar></v-tabar>
+    <v-slide></v-slide>
   </div>
 </template>
 
 <script>
 import header from '@/components/header'
 import tabbar from '@/components/tabbar'
+import slide from '@/components/slidebar'
 export default {
   name: 'app',
   components: {
     'v-header': header,
-    'v-tabar': tabbar
+    'v-tabar': tabbar,
+    'v-slide': slide
   },
   data () {
     return {}
@@ -56,6 +59,9 @@ export default {
     max-width: 100%;
   }
   #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     height: 100%;
     .content {
       &.tabar {

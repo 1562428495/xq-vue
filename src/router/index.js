@@ -21,17 +21,17 @@ export default new Router({
       component: InterCity
     },
     {
-      path: 'user',
+      path: '/user',
       name: 'user',
       component: User
     },
     {
-      path: 'user/login',
+      path: '/user/login',
       name: 'login',
       component: Login
     },
     {
-      path: 'user/regist',
+      path: '/user/regist',
       name: 'regist',
       component: Regist
     },

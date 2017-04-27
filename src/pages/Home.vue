@@ -17,16 +17,17 @@
           <button>回家</button></div>
       </div>
     </div>
-    <route-list></route-list>
+    <route-list :list="routesList"></route-list>
     <share v-show="share"></share>
   </div>
 </template>
-<script type="text/ecmascript-6">
+<script>
   import adv from '@/components/advertisement'
   import serviceList from '@/components/serviceList'
   import routeList from '@/components/routeList'
   import share from '@/components/shareAlert'
 
+  import { mapGetters } from 'vuex'
   export default {
     components: {
       'v-adv': adv,
@@ -38,6 +39,15 @@
       return {
         share: false
       }
+    },
+    computed: {
+      ...mapGetters(['routesList'])
+    },
+    created() {
+        this.$store.dispatch('getRoutesList')
+    },
+    methods: {
+
     }
   }
 </script>
